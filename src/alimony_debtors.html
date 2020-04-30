@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Єдиний реєстр боржників</title>
+    <link rel="icon" href="img/logo_min_just.png" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/amazium.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/pikaday.css">
+    <link rel="stylesheet" type="text/css" href="css/print.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+
+
+</head>
+
+<body>
+
+<header class="header ">
+    <div class="row row--align-center">
+        <div class="grid-4 txt-center">
+            <img src="img/logo_min_just.png" class="img-left-my" width="160px">
+        </div>
+        <div class="grid-6">
+            <h2 class="header-text">Єдиний реєстр боржників</h2>
+        </div>
+        <div class="grid-2 txt-center">
+            <button type="button" onclick="location.href='login.html'" class="btn btn--color-default header-text">
+                Увійти
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="content-area">
+    <div class="section div-border-bottom">
+        <div class="row grid-12 ">
+            <form action="javascript:void(0);">
+                <fieldset class="hide-mobile">
+                <span class="radio toggle">
+                    <span onClick="window.location = 'search_debtor.html';">
+                        <input type="radio" tabindex="6" name="mainPages" id="radioPage1" value="1">
+                        <label for="radioPage1">
+                            <span>Пошук боржника</span>
+                        </label>
+                    </span>
+                    <span onClick="window.location = 'alimony_debtors.html';">
+                        <input type="radio" tabindex="7" name="mainPages" id="radioPage2" checked="checked" value="2">
+                        <label for="radioPage2">
+                            <span>Заборгованість по аліментах</span>
+                        </label>
+                    </span>
+                    <span onClick="window.location = 'wages_debtors.html';">
+                        <input type="radio" tabindex="8" name="mainPages" id="radioPage3" value="3">
+                        <label for="radioPage3">
+                            <span>Заборгованість по заробітній платі</span>
+
+                        </label>
+                    </span>
+                    <span onClick="window.location = 'child_dates_debtors.html';">
+                        <input type="radio" tabindex="9" name="mainPages" id="radioPage4" value="4">
+                        <label for="radioPage4">
+                            <span>Боржники, що перешкоджають у побаченні з дитиною</span>
+
+                        </label>
+                    </span>
+                </span>
+                </fieldset>
+                <fieldset class="show-mobile">
+                <span class="select">
+                  <select>
+                    <option value="1">Пошук боржників</option>
+                    <option value="2">Заборгованість по аліментах</option>
+                    <option value="3">Заборгованість по заробітній платі</option>
+                    <option value="4">Боржники, що перешкоджають у побаченні з дитиною</option>
+                  </select>
+                </span>
+                </fieldset>
+            </form>
+        </div>
+        <div class="print-hide row">
+            <div class="grid-12 txt-center">
+                <button class="btn btn--style-ghost btn btn--size-s" onClick="window.location = 'search_debtor.html';">
+                    Пошук
+                </button>
+                <button class="btn btn--style-ghost btn btn--size-s btn--hoverColor-info float-right">
+                    <i class="txt--fontSize-m">i</i>
+                </button>
+            </div>
+
+            <div class="grid-12 txt-center ">
+                <figure>
+                    <blockquote>
+                        <p>
+                            Здійснити пошук за ПІБ, датою народження, реєстраційному номеру облікової картки
+                            платника
+                            податків та отримати більш детальну інформацію по відкритих виконавчих провадженнях
+                            боржника
+                            можливо безпосередньо з Єдиного реєстру боржників.
+                        </p>
+                        <p>
+                            До переліку боржників, що мають заборгованість за аліментами, включено всіх фізичних
+                            осіб, щодо
+                            яких відкрито виконавче провадження з категорією стягнення
+                            "стягнення аліментів" та існує заборгованість більше ніж 3 місяці.
+                        </p>
+                    </blockquote>
+                    <figcaption>
+                        Перелік впорядковано за терміном відкриття виконавчого провадження (від старих до нових).
+                    </figcaption>
+                </figure>
+            </div>
+        </div><!---->
+
+
+    </div>
+
+    <div id="page2" class="section">
+        <div>
+            <br>
+            <div class="txt-center ">
+                <button class="btn btn--size-xs btn--color-info" tabindex="9"
+                        disabled="disabled">
+                    &lt;&lt;
+                </button>
+                <button class="btn btn--size-xs btn--color-info" tabindex="10"
+                        disabled="disabled">
+                    &lt; Попередні записи
+                </button>
+                <button class="btn btn--size-xs btn--color-info" tabindex="11"
+                        disabled="disabled">
+                    Наступні записи &gt;
+                </button>
+                <button class="btn btn--size-xs btn--color-info" tabindex="12"
+                        disabled="disabled">
+                    &gt;&gt;
+                </button>
+            </div>
+
+            <div class="row row--align-center"><strong>Кількість записів в реєстрі: 168919</strong></div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Прізвище, ім’я, по батькові</th>
+                    <th scope="col">Дата народження</th>
+                    <th scope="col">Детально</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr class="print-no-page-break">
+                    <td data-title="№"><span class="cell-content">1</span></td>
+                    <td data-title="Прізвище, ім’я, по батькові"><span
+                            class="cell-content">Воловик Леонід Васильович</span>
+                    </td>
+                    <td data-title="Дата народження"><span class="cell-content">06.05.1975</span></td>
+                    <td data-title="Детально">
+                        <span class="cell-content">
+                        <a tabindex="12">
+                            Шукати у єдиному реєстрі боржників
+                        </a>
+                        </span>
+                    </td>
+                </tr>
+                <!---->
+
+
+                </tbody>
+            </table>
+
+            <div class="txt-center ">
+                <button class="btn btn--size-xs btn--color-info" tabindex="9"
+                        disabled="disabled">
+                    &lt;&lt;
+                </button>
+                <button class="btn btn--size-xs btn--color-info" tabindex="10"
+                        disabled="disabled">
+                    &lt; Попередні записи
+                </button>
+                <button class="btn btn--size-xs btn--color-info" tabindex="11"
+                        disabled="disabled">
+                    Наступні записи &gt;
+                </button>
+                <button class="btn btn--size-xs btn--color-info" tabindex="12"
+                        disabled="disabled">
+                    &gt;&gt;
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
