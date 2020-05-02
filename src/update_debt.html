@@ -80,99 +80,56 @@
         </div>
 
     </div>
-    <div id="page1" class="section">
+    <div id="page1">
         <div class="row">
             <div class="grid-12">
                 <div class=" row row--align-center">
-                    <div class="grid-8">
-                        <form class="labels-inline ng-pristine ng-valid">
-                            <fieldset>
-                                <label>Тип боржника:</label>
-
-                                <span class="radio">
-                                <span>
-                                    <input type="radio" tabindex="1" name="debtorType" id="radioPhysical" checked=""
-                                           data-ng-model="vm.data.searchType" value="1">
-                                    <label for="radioPhysical">Фізична особа</label>
-                                </span>
-                            <span>
-                                <input type="radio" tabindex="2" name="debtorType" id="radioLegalentity"
-                                       data-ng-model="vm.data.searchType" value="2"
-                                >
-                                <label for="radioLegalentity">Юридична особа</label>
-                            </span>
-
-                            </span>
-                            </fieldset>
-                        </form>
-                    </div>
+                    <span>
+                        <h2 class="text-center">Редагування заборгованості</h2>
+                    </span>
                 </div>
 
                 <div>
-                    <div id="page01" class="section">
-                        <div class="">
-                            <ol class="columns columns-2-desktop">
-                                <li class="column">
-                                    <form>
-                                        <fieldset>
-                                            <label for="inputPersonSurname">Прізвище:</label>
-                                            <input type="text" id="inputPersonSurname" placeholder="Прізвище"
-                                                   tabindex="5" autocomplete="off">
-                                        </fieldset>
+                    <div id="page01">
+                        <div>
+                            <div class="row row--align-right ">
+                                <button class="btn btn--color-negative " tabindex="10">
+                                    Видалити запис
+                                </button>
+                            </div>
 
-                                        <fieldset>
-                                            <label for="inputPersonName">Ім’я:</label>
-                                            <input type="text" id="inputPersonName" placeholder="Ім’я" tabindex="6"
-                                                   autocomplete="off">
-                                        </fieldset>
+                            <div>
+                                <form>
+                                    <fieldset>
+                                        <label for="FullName">ПIБ боржника:</label>
+                                        <input type="text" id="fullName" placeholder="Прізвище"
+                                               tabindex="5" autocomplete="off">
+                                    </fieldset>
 
-                                        <fieldset>
-                                            <label for="inputPersonPatro">По батькові (за наявності):</label>
-                                            <input type="text" id="inputPersonPatro"
-                                                   placeholder="По батькові (за наявності)" tabindex="7"
-                                                   data-ng-model="vm.data.filter.MiddleName" autocomplete="off"
-                                                   class="ng-pristine ng-untouched ng-valid ng-empty">
-                                        </fieldset>
+                                    <fieldset>
+                                        <label for="BirthDate">Дата народження боржника:</label>
+                                        <input type="date" id="birthDate"
+                                               placeholder="Дата народження" tabindex="6"
+                                               autocomplete="off">
+                                    </fieldset>
 
-                                        <fieldset>
-                                            <label for="inputPersonBirthDate">Дата народження:</label>
-                                            <input type="date" id="inputPersonBirthDate"
-                                                   placeholder="Дата народження" tabindex="8"
-                                                   autocomplete="off">
-                                        </fieldset>
-                                    </form>
-                                </li>
-                                <li class="column">
-                                    <form>
-                                        <fieldset>
-                                            <label for="inputPersonSurname">Реєстраційний номер облікової картки
-                                                платника податків:</label>
-                                            <input type="text" id="inputPersonCode" placeholder="" tabindex="9">
-                                        </fieldset>
-                                        <fieldset class="ng-hide">
-                                            <label for="inputPersonSurname">Увага, пошук буде проведено лише по полю
-                                                "Реєстраційний номер облікової картки платника податків"</label>
-                                        </fieldset>
-                                    </form>
-                                </li>
-                            </ol>
-
-                            <fieldset>
-                                <label for="categorySelect_33">
-                                    Категорія стягнення:
-                                </label>
-                                <span class="select">
-        <select id="categorySelect_33">
+                                    <fieldset>
+                                        <label for="categorySelect_33">
+                                            Категорія стягнення:
+                                        </label>
+                                        <span class="select">
+                                            <select id="categorySelect_33" tabindex="7">
             <option value="" selected="selected"></option>
             <option label="стягнення коштів" value="01">стягнення коштів</option>
             <option label="звернення стягнення на майно" value="02">звернення стягнення на майно</option>
             <option label="стягнення аліментів" value="03">стягнення аліментів</option>
             <option label="стягнення періодичних платежів (крім аліментів)" value="04">стягнення періодичних платежів (крім аліментів)</option><option
-                label="стягнення заборгованості із заробітної плати та інших платежів, пов’язаних з трудовими відносинами"
-                value="05">стягнення заборгованості із заробітної плати та інших платежів, пов’язаних з трудовими відносинами</option>
+                                                    label="стягнення заборгованості із заробітної плати та інших платежів, пов’язаних з трудовими відносинами"
+                                                    value="05">стягнення заборгованості із заробітної плати та інших платежів, пов’язаних з трудовими відносинами</option>
             <option label="стягнення соціальних виплат" value="06">стягнення соціальних виплат</option>
             <option label="стягнення заборгованості з оплати комунальних послуг" value="07">стягнення заборгованості з оплати комунальних послуг</option><option
-                label="стягнення штрафів у справах про адміністративні правопорушення" value="08">стягнення штрафів у справах про адміністративні правопорушення</option>
+                                                    label="стягнення штрафів у справах про адміністративні правопорушення"
+                                                    value="08">стягнення штрафів у справах про адміністративні правопорушення</option>
             <option label="стягнення штрафів у справах про адміністративні правопорушення у сфері безпеки дорожнього руху"
                     value="09">стягнення штрафів у справах про адміністративні правопорушення у сфері безпеки дорожнього руху</option>
             <option label="забезпечення позову" value="10">забезпечення позову</option>
@@ -189,7 +146,7 @@
                     value="19">конфіскація коштів та майна за вчинення корупційного та пов’язаного з корупцією правопорушення</option>
             <option label="оплатне вилучення" value="20">оплатне вилучення</option>
             <option label="передача стягувачу предметів, зазначених у виконавчому документі" value="21">передача стягувачу предметів, зазначених у виконавчому документі</option><option
-                label="стягнення коштів на користь держави" value="22">стягнення коштів на користь держави</option>
+                                                    label="стягнення коштів на користь держави" value="22">стягнення коштів на користь держави</option>
             <option label="рішення Європейського суду з прав людини"
                     value="23">рішення Європейського суду з прав людини</option>
             <option label="стягнення виконавчого збору"
@@ -199,25 +156,72 @@
             <option label="стягнення штрафів, накладених державним, приватним виконавцем" value="26">стягнення штрафів, накладених державним, приватним виконавцем</option>
             <option label="стягнення основної винагороди приватного виконавця" value="27">стягнення основної винагороди приватного виконавця</option>
             <option label="усунення перешкод у побаченні з дитиною, встановлення побачення з дитиною" value="28">усунення перешкод у побаченні з дитиною, встановлення побачення з дитиною</option></select>
-    </span>
-                            </fieldset>
+                                </span>
+                                    </fieldset>
 
-                            <div id="physicalResults" class="row row--align-right ">
-                                <p class="message message--color-negative ng-hide"
-                                   data-ng-show="vm.data.searchResults.isOverflow">
-                                    Знайдено забагато записів. Уточніть умови пошуку.
-                                </p>
+                                    <fieldset>
+                                        <label for="identificationCode">Ідентифікаційний код боржника:</label>
+                                        <input type="text" id="identificationCode"
+                                               placeholder="Ідентифікаційний код" tabindex="8"
+                                               autocomplete="off">
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="passportNumber">Реєстраційний номер облікової картки платника
+                                            податків або серія та номер паспорта боржника:</label>
+                                        <input type="text" id="passportNumber"
+                                               placeholder="Реєстраційний номер облікової картки платника податків або серія та номер паспорта боржника"
+                                               tabindex="9"
+                                               autocomplete="off">
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="debtorsBankAccountNumber">Реквізити рахунків боржника(за
+                                            наявності):</label>
+                                        <input type="text" id="debtorsBankAccountNumber"
+                                               placeholder="Реквізити рахунків боржника" tabindex="10"
+                                               autocomplete="off">
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="debtorsPhoneNumber">Номер телефону боржника(за наявності):</label>
+                                        <input type="text" id="debtorsPhoneNumber"
+                                               placeholder="Номер телефону боржника" tabindex="12"
+                                               autocomplete="off">
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="contractorsBankAccountNumber">Реквізити рахунків стягувача(за
+                                            наявності):</label>
+                                        <input type="text" id="contractorsBankAccountNumber"
+                                               placeholder="Реквізити рахунків стягувача" tabindex="11"
+                                               autocomplete="off">
+                                    </fieldset>
+
+
+                                    <fieldset>
+                                        <label for="contractorsPhoneNumber">Номер телефону стягувача(за
+                                            наявності):</label>
+                                        <input type="text" id="contractorsPhoneNumber"
+                                               placeholder="Номер телефону стягувача" tabindex="12"
+                                               autocomplete="off">
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="">:</label>
+                                        <input type="text" id=""
+                                               placeholder="" tabindex=""
+                                               autocomplete="off">
+                                    </fieldset>
+                                    <!--!!!!!!!!!!!!!!!!!!!!!! !TO DO-->
+                                </form>
                             </div>
 
                             <div class="row row--align-right ">
-                                <button class="btn btn--color-info" tabindex="10">
-                                    Очистити
+                                <button class="btn btn--color-info" tabindex="11">
+                                    Відмінити
                                 </button>
-                                <button class="btn btn--color-info ng-hide" tabindex="11">
-                                    Сформувати документ
-                                </button>
-                                <button class="btn btn--color-info" tabindex="13">
-                                    Шукати
+                                <button class="btn btn--color-positive" tabindex="12">
+                                    Зберегти
                                 </button>
                             </div>
 
@@ -225,63 +229,12 @@
                                 <div class="grid-12 footer"></div>
                             </div>
 
-                            <div class="row row--align-right ">
-                                <div id="recaptcha_placeholder"></div>
-                            </div>
-
                         </div>
-
-                        <table class="ng-hide">
-                            <thead>
-                            <tr>
-                                <th colspan="7">
-                                    Результат пошуку фізичних осіб.
-                                    <small>Дата та час пошуку:</small>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="col">Прізвище, ім’я, по батькові</th>
-                                <th scope="col">Дата народження</th>
-                                <th scope="col">Документ виданий</th>
-                                <th scope="col">Виконавець</th>
-                                <th scope="col">Номер ВП</th>
-                                <th scope="col">Категорія стягнення</th>
-                                <th scope="col">Дія</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <!---->
-                            <tr>
-                                <td colspan="7">Записів не знайдено. Уточніть умови пошуку.</td>
-                            </tr>
-                            <tr class="print-no-page-break">
-                                <td>Вороніна Вероніка Анатоліївна</td>
-                                <td>09.10.1987</td>
-                                <td>інший орган, посадова особа Корабельний РВ ДВС м Херсон</td>
-                                <td class="wide-column">Корабельний районний відділ державної виконавчої служби у місті
-                                    Херсоні Південного міжрегіонального управління Міністерства юстиції (м. Одеса)
-                                    <br>
-                                    <span>тел: <a href="tel:(0552) 428386">(0552) 428386</a></span>
-                                    <br> Муценко Дмитро Олегович
-                                    <br>
-                                    <span> тел: <a href="tel:42-83-86">42-83-86</a></span>
-                                    <br>
-                                    <span> email: <a href="mailto:info_km@ks.ks.dvs.gov.ua">info_km@ks.ks.dvs.gov.ua</a></span>
-                                </td>
-                                <td>58089956</td>
-                                <td>стягнення штрафів, накладених державним, приватним виконавцем</td>
-                                <td class="ng-hide">
-                                    <button type="button" class="btn btn--color-negative">Видалити</button>
-                                    <button type="button" class="btn btn--color-warning">Редагувати</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
                     </div>
                     <div id="page02" class="ng-hide">
                         <div class="row">
                             <div class="grid-12">
-                                <div class="section">
+                                <div>
                                     <div>
                                         <form class="labels-inline">
                                             <fieldset>
@@ -348,92 +301,10 @@
 
                                         </form>
 
-                                        <div id="searchResults" class="row row--align-right ">
-                                            <p class="message message--color-negative ng-hide">
-                                                Знайдено забагато записів. Уточніть умови пошуку.
-                                            </p>
-                                            <button class="btn btn--color-info" tabindex="10">
-                                                Очистити
-                                            </button>
-                                            <button class="btn btn--color-info ng-hide" tabindex="11">
-                                                Сформувати документ
-                                            </button>
-                                            <button class="btn btn--color-info" tabindex="11">
-                                                Шукати
-                                            </button>
-                                        </div>
-
                                         <div class="row">
                                             <div class="grid-12 footer"></div>
                                         </div>
 
-                                    </div>
-
-                                    <div id="paging1" class="txt-center  ng-hide">
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="9"
-                                                disabled="disabled">
-                                            &lt;&lt;
-                                        </button>
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="10"
-                                                disabled="disabled">
-                                            &lt; Попередні записи
-                                        </button>
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="11"
-                                                disabled="disabled">
-                                            Наступні записи &gt;
-                                        </button>
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="12"
-                                                disabled="disabled">
-                                            &gt;&gt;
-                                        </button>
-                                    </div>
-
-                                    <table class="ng-hide">
-                                        <thead>
-                                        <tr>
-                                            <th colspan="6">
-                                                Результат пошуку юридичних осіб.
-                                                <small>Дата та час пошуку:</small>
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Найменування</th>
-                                            <!--<th scope="col">Адреса</th>-->
-                                            <th scope="col">Документ виданий</th>
-                                            <th scope="col">Зв'язок з виконавцем</th>
-                                            <th scope="col">Номер виконавчого провадження</th>
-                                            <th scope="col">Категорія стягнення</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr class="print-no-page-break">
-                                            <td colspan="6">Записів не знайдено. Уточніть умови пошуку.</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <div id="paging2" class="txt-center  ng-hide">
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="9"
-                                                disabled="disabled">
-                                            &lt;&lt;
-                                        </button>
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="10"
-                                                disabled="disabled">
-                                            &lt; Попередні записи
-                                        </button>
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="11"
-                                                disabled="disabled">
-                                            Наступні записи &gt;
-                                        </button>
-                                        <button class="btn btn--size-xs btn--color-info" tabindex="12"
-                                                disabled="disabled">
-                                            &gt;&gt;
-                                        </button>
-                                    </div>
-
-                                    <div class="txt-center ng-hide">
-                                        Кількість записів в реєстрі:
-                                        <small data-ng-show="vm.data.pages > 1" class="ng-hide">(с. 1)</small>
                                     </div>
                                 </div>
                             </div>
