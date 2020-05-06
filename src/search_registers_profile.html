@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Єдиний реєстр боржників</title>
+    <link rel="icon" href="img/logo_min_just.png" type="image/png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="css/amazium.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="css/pikaday.css">
+    <link rel="stylesheet" type="text/css" href="css/print.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+
+<body>
+
+
+<header class="header ">
+    <div class="row row--align-center">
+        <div class="grid-4 txt-center">
+            <img src="img/logo_min_just.png" class="img-left-my" width="160px">
+        </div>
+        <div class="grid-6">
+            <h2 class="header-text">Єдиний реєстр боржників</h2>
+        </div>
+        <div class="grid-2 txt-center">
+            <button type="button" onclick="location.href='login.html'"
+                    class="btn btn--size-l btn--color-none header-text">
+                Увійти
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="content-area">
+    <div class="row" id="adminMode">
+        <form action="javascript:void(0);">
+            <fieldset class="hide-mobile">
+                    <span class="radio toggle">
+                        <span>
+                            <label id="registersName">
+                               Вітаємо, Олександр Сергійович Млекович( адмін )!
+                            </label>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-positive" name="mainPages"
+                                    id="createProfile" onClick="window.location = 'create_registers_profile.html';">Створити профіль реєстратора</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-info" name="mainPages"
+                                    id="searchProfile"
+                                    onClick="window.location = 'search_registers_profile.html';">Пошук реєстраторa</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-info" name="mainPages"
+                                    id="viewProfiles"
+                                    onClick="window.location = 'all_profiles.html';">Переглянути всіх реєстраторів</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-negative" name="mainPages"
+                                    id="exit">Вийти</button>
+                        </span>
+
+                    </span>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class=" div-border-bottom">
+        <div class="row grid-12 ">
+            <form action="javascript:void(0);">
+                <fieldset class="hide-mobile">
+                    <span class="radio toggle">
+                        <span onClick="window.location = 'search_debtor.html';">
+                            <input type="radio" tabindex="6" name="mainPages" id="radioPage1">
+                            <label for="radioPage1">
+                                <span>Пошук боржника</span>
+                            </label>
+                        </span>
+                        <span onClick="window.location = 'alimony_debtors.html';">
+                            <input type="radio" tabindex="7" name="mainPages" id="radioPage2">
+                            <label for="radioPage2">
+                                <span>Заборгованість по аліментах</span>
+                            </label>
+                        </span>
+                        <span onClick="window.location = 'wages_debtors.html';">
+                            <input type="radio" tabindex="8" name="mainPages" id="radioPage3">
+                            <label for="radioPage3">
+                                <span>Заборгованість по заробітній платі</span>
+
+                            </label>
+                        </span>
+                        <span onClick="window.location = 'child_dates_debtors.html';">
+                            <input type="radio" tabindex="9" name="mainPages" id="radioPage4">
+                            <label for="radioPage4">
+                                <span>Боржники, що перешкоджають у побаченні з дитиною</span>
+                            </label>
+                        </span>
+                    </span>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="grid-12">
+            <div class=" row row--align-center">
+                    <span>
+                        <h3 class="text-center">Пошук профіля реєстратора</h3>
+                    </span>
+            </div>
+            <div>
+                <form>
+                    <fieldset>
+                        <label for="email">Електронна адреса виконавця:</label>
+                        <input type="email" id="email" placeholder="Електронна адреса"
+                               tabindex="1" autocomplete="off">
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="stateAgency">Назва державного органу, для якого створений профіль
+                            реєстратора:</label>
+                        <input type="text" id="stateAgency" placeholder="Назва державного органу" tabindex="2"
+                               autocomplete="off">
+                    </fieldset>
+                </form>
+
+                <div id="results" class="row row--align-right ">
+                    <p class="message message--color-negative ng">
+                        Знайдено забагато профілів. Уточніть умови пошуку.
+                    </p>
+                </div>
+
+                <div class="row row--align-right ">
+                    <button class="btn btn--color-info" tabindex="3">
+                        Очистити
+                    </button>
+                    <button class="btn btn--color-info" tabindex="4">
+                        Шукати
+                    </button>
+                </div>
+
+                <div class="row">
+                    <div class="grid-12 footer"></div>
+                </div>
+
+            </div>
+
+            <table class="ng">
+                <thead>
+                <tr>
+                    <th colspan="7">
+                        Результат пошуку.
+                        <small>Дата та час пошуку:</small>
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="7">Профіль не знайдено. Уточніть умови пошуку.</td>
+                </tr>
+                <tr>
+                    <th scope="col">Прізвище, ім’я, по батькові</th>
+                    <th scope="col">Назва державного органу, для якого створений профіль</th>
+                    <th scope="col">Електронна адреса</th>
+                    <th scope="col">Номер телефону</th>
+                    <th scope="col">Пароль профіля</th>
+                    <th scope="col">Статус</th>
+                    <th scope="col">Дія</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr class="print-no-page-break">
+                    <td>Вороніна Вероніка Анатоліївна</td>
+                    <td>Шосткинський міськрайонний відділ державної виконавчої служби Північно-Східного міжрегіонального
+                        управління Міністерства юстиції (м. Суми)
+                    </td>
+                    <td>some.email@gmail.com</td>
+                    <td>+38058089956</td>
+                    <td>qwerty123456</td>
+                    <td> Активний / Деактивований</td>
+                    <td>
+                        <button class="btn btn--color-positive " tabindex="6">
+                            Активувати профіль
+                        </button>
+                        <button class="btn btn--color-negative " tabindex="7">
+                            Деактивувати профіль
+                        </button>
+
+                        <button type="button" class="btn btn--color-warning"
+                                onclick="window.location='update_profile.html'">Редагувати
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

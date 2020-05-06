@@ -27,7 +27,7 @@
             <h2 class="header-text">Єдиний реєстр боржників</h2>
         </div>
         <div class="grid-2 txt-center">
-            <button type="button" onclick="location.href='login.html'" class="btn btn--color-default header-text">
+            <button type="button" onclick="location.href='login.html'" class="btn btn--size-l btn--color-none header-text">
                 Увійти
             </button>
         </div>
@@ -35,7 +35,36 @@
 </header>
 
 <div class="content-area">
-    <div class="section div-border-bottom">
+    <div class="row" id="registerMode">
+        <form action="javascript:void(0);">
+            <fieldset class="hide-mobile">
+                    <span class="radio toggle">
+                        <span>
+                            <label id="registersName">
+                               Вітаємо, Олександр Сергійович Млекович!
+                            </label>
+                        </span>
+                        <span>
+                            <button type="button" class="btn btn--color-positive" name="mainPages"
+                                    id="createDebt" onClick="window.location = 'create_debt.html';">Створити запис про заборгованість</button>
+                        </span>
+                        <span>
+                            <button type="button" class="btn btn--color-info" name="mainPages"
+                                    id="viewProfile"
+                                    onClick="window.location = '.html';">Переглянути особистий профіль</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-negative" name="mainPages"
+                                    id="exit">Вийти</button>
+                        </span>
+
+                    </span>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="div-border-bottom">
         <div class="row grid-12 ">
             <form action="javascript:void(0);">
                 <fieldset class="hide-mobile">
@@ -120,6 +149,7 @@
 
 
     </div>
+
     <div id="page3" class="section">
         <div>
             <br>
