@@ -56,7 +56,44 @@
 
                         <span>
                             <button type="button" class="btn btn--color-negative" name="mainPages"
-                                    id="exit">Вийти</button>
+                                    id="exitRegister">Вийти</button>
+                        </span>
+
+                    </span>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="row" id="adminMode">
+        <form action="javascript:void(0);">
+            <fieldset class="hide-mobile">
+                    <span class="radio toggle">
+                        <span>
+                            <label id="adminName">
+                               Вітаємо, Олександр Сергійович Млекович( адмін )!
+                            </label>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-positive" name="mainPages"
+                                    id="createProfile" onClick="window.location = 'create_registers_profile.html';">Створити профіль реєстратора</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-info" name="mainPages"
+                                    id="searchProfile"
+                                    onClick="window.location = 'search_registers_profile.html';">Пошук реєстраторa</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-info" name="mainPages"
+                                    id="viewProfiles"
+                                    onClick="window.location = 'all_profiles.html';">Переглянути всіх реєстраторів</button>
+                        </span>
+
+                        <span>
+                            <button type="button" class="btn btn--color-negative" name="mainPages"
+                                    id="exitAdmin">Вийти</button>
                         </span>
 
                     </span>

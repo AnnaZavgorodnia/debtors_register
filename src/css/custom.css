@@ -4,34 +4,34 @@
         height: 75px
     }
 
-    @font-face {
-        font-family: 'FuturaNewDemi';
-        src: url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.eot);
-        src: url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.woff2) format("woff2"), url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.woff) format("woff"), url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.ttf) format("truetype");
-        font-weight: 400;
-        font-style: normal
-    }
-    @font-face {
-        font-family: 'FuturaNewBook';
-        src: url(../fonts/FuturaNewBook/FuturaNewBook-Reg.eot);
-        src: url(../fonts/FuturaNewBook/FuturaNewBook-Reg.woff2) format("woff2"), url(../fonts/FuturaNewBook/FuturaNewBook-Reg.woff) format("woff"), url(../fonts/FuturaNewBook/FuturaNewBook-Reg.ttf) format("truetype");
-        font-weight: 400;
-        font-style: normal
-    }
-    @font-face {
-        font-family: 'FuturaNewLight';
-        src: url(../fonts/FuturaNewLight/FuturaNewLight-Reg.eot);
-        src: url(../fonts/FuturaNewLight/FuturaNewLight-Reg.woff2) format("woff2"), url(../fonts/FuturaNewLight/FuturaNewLight-Reg.woff) format("woff"), url(../fonts/FuturaNewLight/FuturaNewLight-Reg.ttf) format("truetype");
-        font-weight: 400;
-        font-style: normal
-    }
-    @font-face {
-        font-family: 'AmazingGroteskDemi';
-        src: url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.eot);
-        src: url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.woff2) format("woff2"), url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.woff) format("woff"), url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.ttf) format("truetype");
-        font-weight: 400;
-        font-style: normal
-    }
+    /*@font-face {*/
+    /*    font-family: 'FuturaNewDemi';*/
+    /*    src: url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.eot);*/
+    /*    src: url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.woff2) format("woff2"), url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.woff) format("woff"), url(../fonts/FuturaNewDemi/FuturaNewDemi-Reg.ttf) format("truetype");*/
+    /*    font-weight: 400;*/
+    /*    font-style: normal*/
+    /*}*/
+    /*@font-face {*/
+    /*    font-family: 'FuturaNewBook';*/
+    /*    src: url(../fonts/FuturaNewBook/FuturaNewBook-Reg.eot);*/
+    /*    src: url(../fonts/FuturaNewBook/FuturaNewBook-Reg.woff2) format("woff2"), url(../fonts/FuturaNewBook/FuturaNewBook-Reg.woff) format("woff"), url(../fonts/FuturaNewBook/FuturaNewBook-Reg.ttf) format("truetype");*/
+    /*    font-weight: 400;*/
+    /*    font-style: normal*/
+    /*}*/
+    /*@font-face {*/
+    /*    font-family: 'FuturaNewLight';*/
+    /*    src: url(../fonts/FuturaNewLight/FuturaNewLight-Reg.eot);*/
+    /*    src: url(../fonts/FuturaNewLight/FuturaNewLight-Reg.woff2) format("woff2"), url(../fonts/FuturaNewLight/FuturaNewLight-Reg.woff) format("woff"), url(../fonts/FuturaNewLight/FuturaNewLight-Reg.ttf) format("truetype");*/
+    /*    font-weight: 400;*/
+    /*    font-style: normal*/
+    /*}*/
+    /*@font-face {*/
+    /*    font-family: 'AmazingGroteskDemi';*/
+    /*    src: url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.eot);*/
+    /*    src: url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.woff2) format("woff2"), url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.woff) format("woff"), url(../fonts/AmazingGroteskDemi/AmazingGrotesk-DemiBold.ttf) format("truetype");*/
+    /*    font-weight: 400;*/
+    /*    font-style: normal*/
+    /*}*/
 
     body {
         font-family: "FuturaNewBook", Arial, "Helvetica Neue", Helvetica, sans-serif;
