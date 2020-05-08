@@ -525,7 +525,6 @@ $('#searchBtnPhysical').click(
 );
 
 //legal
-
 $("#inputFirmName").keyup(function () {
     if ($(this).val().trim() !== '') {
 
@@ -916,6 +915,7 @@ $('#searchBtnLegal').click(
     }
 );
 
+// modal
 $('.closeModal').click(function () {
     $('#deleteModal').css('display', 'none');
 });

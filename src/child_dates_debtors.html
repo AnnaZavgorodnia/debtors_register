@@ -27,7 +27,8 @@
             <h2 class="header-text">Єдиний реєстр боржників</h2>
         </div>
         <div class="grid-2 txt-center">
-            <button type="button" onclick="location.href='login.html'" class="btn btn--size-l btn--color-none header-text">
+            <button type="button" onclick="location.href='login.html'"
+                    class="btn btn--size-l btn--color-none header-text">
                 Увійти
             </button>
         </div>
@@ -151,12 +152,12 @@
                 <button class="btn btn--style-ghost btn btn--size-s" onClick="window.location = 'search_debtor.html';">
                     Пошук
                 </button>
-                <button class="btn btn--style-ghost btn btn--size-s btn--hoverColor-info float-right">
+                <button class="btn btn--style-ghost btn btn--size-s btn--hoverColor-info float-right" id="showInfo">
                     <i class="txt--fontSize-m">i</i>
                 </button>
             </div>
 
-            <div class="grid-12 txt-center ">
+            <div class="grid-12 txt-center ng-hide" id="info">
                 <figure>
                     <blockquote>
                         <p>
@@ -179,73 +180,33 @@
                 </figure>
 
             </div>
-        </div><!---->
-
+        </div>
 
     </div>
-    <div id="page4" class="section" >
-        <div>
-            <br>
 
-            <div id="physicalResults" class="txt-center print-hide">
-                <button class="btn btn--size-xs btn--color-info" tabindex="9"  disabled="disabled">
-                    &lt;&lt;
-                </button>
-                <button class="btn btn--size-xs btn--color-info" tabindex="10"  disabled="disabled">
-                    &lt; Попередні записи
-                </button>
-                <button class="btn btn--size-xs btn--color-info" tabindex="11" >
-                    Наступні записи &gt;
-                </button>
-                <button class="btn btn--size-xs btn--color-info" tabindex="12" >
-                    &gt;&gt;
-                </button>
-            </div>
-
-            <div class="row row--align-center"><strong>Кількість записів в реєстрі: 95</strong></div>
-            <table>
-                <thead>
+    <div>
+        <br>
+        <div class="row row--align-center"><strong id='numberOfRecords'></strong></div>
+        <table>
+            <thead>
                 <tr>
                     <th scope="col"></th>
                     <th scope="col">Прізвище, ім’я, по батькові</th>
                     <th scope="col">Дата народження</th>
                     <th scope="col">Детально</th>
                 </tr>
-                </thead>
-                <tbody>
-                <!---->
-                <tr  class="print-no-page-break">
-                    <td data-title="№">1</td>
-                    <td data-title="Прізвище, ім’я, по батькові">Вороніна Вероніка Анатоліївна</td>
-                    <td data-title="Дата народження">09.10.1987</td>
-                    <td data-title="Детально">
-                        <a tabindex="12" >
-                            Шукати у єдиному реєстрі боржників
-                        </a></td>
+            </thead>
 
-                </tbody>
-            </table>
+            <tbody id="results">
+            </tbody>
+        </table>
 
-            <div class="txt-center print-hide">
-                <button class="btn btn--size-xs btn--color-info" tabindex="9" disabled="disabled">
-                    &lt;&lt;
-                </button>
-                <button class="btn btn--size-xs btn--color-info" tabindex="10"  disabled="disabled">
-                    &lt; Попередні записи
-                </button>
-                <button class="btn btn--size-xs btn--color-info" tabindex="11">
-                    Наступні записи &gt;
-                </button>
-                <button class="btn btn--size-xs btn--color-info" tabindex="12" >
-                    &gt;&gt;
-                </button>
-            </div>
-
-        </div>
     </div>
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/child_dates_debtors.js"></script>
 </body>
 
 </html>
