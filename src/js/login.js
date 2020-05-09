@@ -1,9 +1,9 @@
 $("#submitBtn").click(function () {
 
-    var username = $("#username").val().trim();
-    var password = $("#password").val().trim();
-    
-    var mode = 'user';
+    let username = $("#username").val().trim();
+    let password = $("#password").val().trim();
+
+    let mode = 'user';
 
     if (username === 'admin')
         window.location = "search_debtor.html";

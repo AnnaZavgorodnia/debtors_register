@@ -32,7 +32,6 @@
     /*    font-weight: 400;*/
     /*    font-style: normal*/
     /*}*/
-
     body {
         font-family: "FuturaNewBook", Arial, "Helvetica Neue", Helvetica, sans-serif;
         font-size: 16px;
@@ -93,6 +92,11 @@
 
     .div-border-bottom {
         border-bottom: 1px solid #BBB;
+    }
+
+    .div-border {
+        border-bottom: 1px solid #BBB;
+        border-top: 1px solid #BBB;
     }
 
     form.top-padding {

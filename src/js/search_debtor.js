@@ -493,6 +493,13 @@ $('#searchBtnPhysical').click(
                                 <button type="button" class="btn btn--color-negative delete-btn" data-id="${entity.id}" data-toggle="modal" data-target="#deleteModal">Видалити</button>
                                 <button type="button" class="btn btn--color-warning update-btn" data-id="${entity.id}">Редагувати</button>
                             </td>
+                            <td data-title="Детально" >
+                                  <span class="cell-content">
+                                            <a href="detailed_record_info.html?id=${entity.id}">
+                                                Детальна інформація
+                                            </a>
+                                  </span>
+                            </td>
                         </tr>`;
 
                 $("#physicalResults").append(entityElement);
@@ -885,6 +892,13 @@ $('#searchBtnLegal').click(
                                         <td >
                                             <button type="button" class="btn btn--color-negative delete-btn" data-id="${entity.id}" data-toggle="modal" data-target="#deleteModal">Видалити</button>
                                             <button type="button" class="btn btn--color-warning update-btn" data-id="${entity.id}">Редагувати</button>
+                                        </td>
+                                        <td data-title="Детально" >
+                                            <span class="cell-content">
+                                            <a href="detailed_record_info.html?id=${entity.id}">
+                                                Детальна інформація
+                                            </a>
+                                            </span>
                                         </td>
                                      </tr>`;
 
