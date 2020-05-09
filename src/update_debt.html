@@ -49,13 +49,12 @@
                         </span>
                         <span>
                             <button type="button" class="btn btn--color-info" name="mainPages"
-                                    id="viewProfile"
-                                    onClick="window.location = '.html';">Переглянути особистий профіль</button>
+                                    id="viewMyProfile">Переглянути особистий профіль</button>
                         </span>
 
                         <span>
                             <button type="button" class="btn btn--color-negative" name="mainPages"
-                                    id="exit">Вийти</button>
+                                    id="exitRegister">Вийти</button>
                         </span>
 
                     </span>
@@ -114,8 +113,9 @@
         <div class="row">
             <div class="grid-12">
                 <div class=" row row--align-center">
-                    <span>
+                    <span >
                         <h2 class="text-center">Редагування заборгованості</h2>
+                        <div id="message"></div>
                     </span>
                 </div>
 
@@ -126,6 +126,25 @@
                             Видалити запис
                         </button>
                     </div>
+
+                    <div id="deleteModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <span class="closeModal">&times;</span>
+                                <br>
+                                <h2>Видалення запису</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>Ви впевнені, що хочете видалити цей запис?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn--color-negative" id="confirmDeleteBtn">Так</button>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <form id="updateForm">
 
@@ -426,7 +445,7 @@
                         </fieldset>
 
                         <div class="row row--align-right ">
-                            <button class="btn btn--color-info" tabindex="29" id="cancelBtn">
+                            <button class="btn btn--color-info" tabindex="29" id="cancelUpdate">
                                 Відмінити
                             </button>
                             <button type="submit" class="btn btn--color-positive" tabindex="31" id="submitBtn">

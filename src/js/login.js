@@ -11,6 +11,7 @@ $("#submitBtn").click(function () {
         $("#message").html('Неправильний пароль або логін');
 
 
+    //TODO
     //if (username !== "" && password !== "") {
 
     // $.ajax({

@@ -77,7 +77,7 @@ $(document).ready(function () {
 
 
             let debtInfoHtml = `<div>
-                                <fieldset>
+                             <fieldset>
                                 <label class="physicalLabel ${parsed_data.is_legal_entity ? 'ng-hide' : ''}" for="fullName">ПIБ боржника:</label>
                                 <label class="legalLabel ${parsed_data.is_legal_entity ? '' : 'ng-hide'}" for="fullName">Найменування:</label>
                                 <div id="fullName">${parsed_data.full_name ? parsed_data.full_name : 'Дані відсутні'}</div>
@@ -264,6 +264,5 @@ $(document).ready(function () {
         }
 
     }
-
 });
 

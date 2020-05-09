@@ -99,20 +99,9 @@ $('#createForm').submit(function (e) {
         is_legal_entity
     };
 
-    // $.ajax({
-    //     url: 'ЗАПРОС НА ТВІЙ СЕРВЕР НАХ',
-    //     type: 'post',
-    //     data,
-    //     success: function (response) {
-    //         var msg = "";
-    //         if (response === 0) {
-    //             //ok
-    //             window.location = "search_debtor.html";
-    //         } else {
-    //             // not ok
-    //         }
-    //     }
-    // });
+    //TODO
+    // запрос на створення запису
+
     let id = 1111; // з твого респонсу
     window.location = `detailed_record_info.html?id=${id}`;
 

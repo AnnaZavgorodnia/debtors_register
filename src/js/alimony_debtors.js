@@ -104,7 +104,7 @@ $(document).ready(function () {
                     <td data-title="Дата народження"><span class="cell-content">${entity.birth_date}</span></td>
                     <td data-title="Детально">
                         <span class="cell-content">
-                        <a tabindex="12" href="search_debtor.html?fullname=${entity.fullname}">
+                        <a tabindex="12" href="search_debtor.html?fullname=${entity.fullname}&type=physical">
                             Шукати у єдиному реєстрі боржників
                         </a>
                         </span>

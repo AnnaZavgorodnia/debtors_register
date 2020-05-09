@@ -129,7 +129,7 @@ $(document).ready(function () {
                         <td data-title="Загальна сума заборгованості">${entity.amount_of_money_to_be_recovered}</td>
                         <td data-title="Кількість відкритих ВП">${entity.number_of_issues}</td>
                         <td>
-                            <a href="search_debtor.html?id_code=${entity.identification_code}" >
+                            <a href="search_debtor.html?id_code=${entity.identification_code}&type=legal" >
                                 Шукати у єдиному реєстрі боржників
                             </a>
                         </td>

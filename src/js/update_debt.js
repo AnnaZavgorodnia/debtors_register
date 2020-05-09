@@ -1,10 +1,12 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const ID = urlParams.get('id');
+let id_code;
 
 if (queryString) {
     if (ID) {
-        //TODO request get record by id
+        //TODO
+        // запрос на отримання запису по айді
 
         let testData = {
             "full_name": "full_name",
@@ -69,7 +71,7 @@ if (queryString) {
             "            \"document_date_of_entry_into_force\": \"document_date_of_entry_into_force\",\n" +
             "            \"amount_of_money_to_be_recovered\": \"amount_of_money_to_be_recovered\",\n" +
             "            \"decision_implementation_details\": \"decision_implementation_details\",\n" +
-            "            \"is_legal_entity\": false\n" +
+            "            \"is_legal_entity\": true\n" +
             "        }";
 
         let parsed_data = JSON.parse(data);
@@ -91,7 +93,7 @@ if (queryString) {
         $('#contractorEmail').val(parsed_data.contractor_email);
 
         $('#coverLetterNotPresent').prop('checked', !parsed_data.cover_letter_present);
-        if(!parsed_data.cover_letter_present)
+        if (!parsed_data.cover_letter_present)
             $('#coverLetterInfo').addClass('ng-hide');
 
         $('#coverLetterCorrespondent').val(parsed_data.cover_letter_correspondent);
@@ -112,18 +114,19 @@ if (queryString) {
         $('#amountOfMoneyToBeRecovered').val(parsed_data.amount_of_money_to_be_recovered);
         $('#decisionImplementationDetails').val(parsed_data.decision_implementation_details);
 
-        if( parsed_data.is_legal_entity ){
+        if (parsed_data.is_legal_entity) {
             $('#physicalDebtor').addClass('ng-hide');
 
             $('.legalLabel').removeClass('ng-hide');
             $('.physicalLabel').addClass('ng-hide');
-        }
-        else{
+        } else {
             $('#physicalDebtor').removeClass('ng-hide');
 
             $('.physicalLabel').removeClass('ng-hide');
             $('.legalLabel').addClass('ng-hide');
         }
+
+        id_code = parsed_data.identification_code;
 
 
     } else {
@@ -140,8 +143,11 @@ $('#coverLetterPresent').change(function () {
         $('#coverLetterInfo').removeClass('ng-hide');
 });
 
-$('#cancelCreate').click(function () {
-    window.location = 'search_debtor.html';
+$('#cancelUpdate').click(function (e) {
+    e.preventDefault();
+
+    let type = $('.legalLabel').hasClass('ng-hide') ? 'physical' : 'legal';
+    window.location = `search_debtor.html?id_code=${id_code}&type=${type}`;
 });
 
 $('#updateForm').submit(function (e) {
@@ -214,21 +220,33 @@ $('#updateForm').submit(function (e) {
     };
 
 
-    //TODO request to updte
-    // $.ajax({
-    //     url: 'ЗАПРОС НА ТВІЙ СЕРВЕР НАХ',
-    //     type: 'post',
-    //     data,
-    //     success: function (response) {
-    //         var msg = "";
-    //         if (response === 0) {
-    //             //ok
-    //             window.location = "search_debtor.html";
-    //         } else {
-    //             // not ok
-    //         }
-    //     }
-    // });
+    //TODO
+    // запрос на апдейт
+
     window.location = `detailed_record_info.html?id=${ID}`;
+
+});
+
+$("#deleteBtn").click(function () {
+    $('#deleteModal').css('display', 'block');
+});
+
+$('.closeModal').click(function () {
+    $('#deleteModal').css('display', 'none');
+});
+
+$('#confirmDeleteBtn').click(function () {
+    //TODO
+    // запрос на видалення запису
+
+    $('#deleteModal').css('display', 'none');
+
+    let ok = true;
+
+    if (ok) {
+        window.location = `search_debtor.html`;
+    } else {
+        $("#message").html("Виникла помилка. Не вдалося видалити запис!");
+    }
 
 });
